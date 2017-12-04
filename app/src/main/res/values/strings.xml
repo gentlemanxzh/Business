@@ -102,4 +102,7 @@
     <string name="welcom_content_03">通过互联网,可以学到任何我们想学的知识,所以你要利用好.</string>
     <string name="welcom_head_04">提高效率,少熬夜</string>
     <string name="welcom_content_04">设法提高我们的工作效率,而不是延长我们的工作时间.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
