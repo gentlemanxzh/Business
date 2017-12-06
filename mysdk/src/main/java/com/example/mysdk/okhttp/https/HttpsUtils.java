@@ -20,7 +20,6 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-import static com.example.mysdk.okhttp.https.HttpsUtils.chooseTrustManager;
 
 /**
  * @author gentleman
