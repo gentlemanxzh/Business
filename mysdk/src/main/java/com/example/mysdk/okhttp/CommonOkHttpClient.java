@@ -62,15 +62,15 @@ public class CommonOkHttpClient {
 
     }
 
-    /**
-     * 通过构造好的Request,Callback去发送请求
-     *
-     * @param request
-     * @param handle
-     */
-    public static Call get(Request request, DisposeDataHandle handle) {
-        Call call = mOkHttpClient.newCall(request);
-        call.enqueue(new CommonJsonCallback(handle));
-        return call;
-    }
+//    /**
+//     * 通过构造好的Request,Callback去发送请求
+//     *
+//     * @param request
+//     * @param handle
+//     */
+//    public static Call get(Request request, DisposeDataHandle handle) {
+//        Call call = mOkHttpClient.newCall(request);
+//        call.enqueue(new CommonJsonCallback(handle));
+//        return call;
+//    }
 }

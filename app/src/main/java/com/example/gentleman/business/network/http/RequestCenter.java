@@ -6,6 +6,7 @@ import com.example.mysdk.okhttp.listener.DisposeDataHandle;
 import com.example.mysdk.okhttp.listener.DisposeDataListener;
 import com.example.mysdk.okhttp.request.CommonRequest;
 import com.example.mysdk.okhttp.request.RequestParams;
+import com.example.mysdk.okhttp.response.CommonJsonCallback;
 
 /**
  * @author gentleman
@@ -14,9 +15,11 @@ import com.example.mysdk.okhttp.request.RequestParams;
  */
 
 public class RequestCenter {
+
+    //post请求的具体操作
     public static void postRequest(String url, RequestParams params, DisposeDataListener listener, Class<?> clazz) {
-        CommonOkHttpClient.get(CommonRequest.
-                createGetRequest(url, params), new DisposeDataHandle(listener, clazz));
+        CommonOkHttpClient.sendRequest(CommonRequest.
+                createGetRequest(url, params), new CommonJsonCallback(new DisposeDataHandle(listener,clazz)));
     }
 
     //根据参数发送所有的post请求
