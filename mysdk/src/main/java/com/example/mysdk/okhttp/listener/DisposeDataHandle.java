@@ -6,8 +6,8 @@ package com.example.mysdk.okhttp.listener;
  */
 
 public class DisposeDataHandle {
-    private DisposeDataListener mListener = null;
-    private Class<?> mClass =null;
+    public DisposeDataListener mListener = null;
+    public Class<?> mClass =null;
 
     public DisposeDataHandle(DisposeDataListener mListener) {
         this.mListener = mListener;

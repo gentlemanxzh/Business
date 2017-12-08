@@ -42,10 +42,10 @@ public class CommonJsonCallback implements Callback {
     private Class<?> mClass;
 
 
-    public CommonJsonCallback(DisposeDataListener mListener, Handler mDeliveryHandler, Class<?> mClass) {
-        this.mListener = mListener;
+    public CommonJsonCallback(DisposeDataHandle handle) {
+        this.mListener = handle.mListener;
         this.mDeliveryHandler = new Handler(Looper.getMainLooper());
-        this.mClass = mClass;
+        this.mClass = handle.mClass;
     }
 
 
@@ -101,6 +101,7 @@ public class CommonJsonCallback implements Callback {
                         mListener.OnSuccess(result);
                     }else {
                         //TODO 需要我们转换为实体对象
+                        mListener.OnSuccess(result);
                     }
 
                 }else {
