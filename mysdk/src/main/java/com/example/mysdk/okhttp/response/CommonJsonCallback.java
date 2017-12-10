@@ -6,6 +6,7 @@ import android.os.Looper;
 import com.example.mysdk.okhttp.exception.OkHttpException;
 import com.example.mysdk.okhttp.listener.DisposeDataHandle;
 import com.example.mysdk.okhttp.listener.DisposeDataListener;
+import com.example.mysdk.util.ResponseEntityToModule;
 
 import org.json.JSONObject;
 
@@ -101,7 +102,13 @@ public class CommonJsonCallback implements Callback {
                         mListener.OnSuccess(result);
                     }else {
                         //TODO 需要我们转换为实体对象
-                        mListener.OnSuccess(result);
+
+                        Object obj = ResponseEntityToModule.parseJsonObjectToModule(result, mClass);
+                        if (obj != null) {
+                            mListener.OnSuccess(obj);
+                        } else {
+                            mListener.OnFailure(new OkHttpException(JSON_ERROR, EMPTY_MSG));
+                        }
                     }
 
                 }else {

@@ -7,6 +7,7 @@ import com.example.mysdk.okhttp.listener.DisposeDataListener;
 import com.example.mysdk.okhttp.request.CommonRequest;
 import com.example.mysdk.okhttp.request.RequestParams;
 import com.example.mysdk.okhttp.response.CommonJsonCallback;
+import com.example.mysdk.util.ResponseEntityToModule;
 
 /**
  * @author gentleman
@@ -25,6 +26,6 @@ public class RequestCenter {
     //根据参数发送所有的post请求
     public static void requestRecommandData(DisposeDataListener listener) {
 
-        RequestCenter.postRequest(HttpConstants.HOME_RECOMMAND, null, listener,null);
+        RequestCenter.postRequest(HttpConstants.HOME_RECOMMAND, null, listener, ResponseEntityToModule.class);
     }
 }

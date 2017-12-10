@@ -8,13 +8,16 @@ import com.example.mysdk.okhttp.request.RequestParams;
 import com.example.mysdk.okhttp.response.CommonJsonCallback;
 
 /**
- *
- *
+ * @author gentleman
+ * @function 定义所有的请求地址
  * Created by gentleman on 2017/12/6.
  */
 
 public class HttpConstants {
 
+    /**
+     * 服务器地址
+     */
     private static final String ROOT_URL = "http://192.168.43.85:8080";
 
     /**
